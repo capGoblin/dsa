@@ -1,0 +1,56 @@
+
+isRightHeavy() == true {
+
+10
+  20 (-1)
+    30
+   leftRotate(10)
+
+10
+  30 (1) balanceFactor(root.right) > 0 ? RL rotation()
+20
+  rightRotate(30)
+  leftRotate(10)
+  RL rotation()
+
+
+}
+
+isLeftHeavy() == true {
+
+    10
+  20 (1)
+30
+   RightRotate(10)
+
+  10
+30 (-1) -> balanceFactor(root.left) < 0 ? LR rotation()
+  20
+  LeftRotate(30)
+  RightRotate(10)
+  LR rotation()
+}
+
+
+
+10 root
+  20 newRoot
+    30
+  LeftRotate(10) {
+
+  newRoot = root.right
+  root.right = newRoot.left
+
+  10             10
+    20    ->       15
+  15  30
+
+  newRoot.left = root
+
+  10     ->    20
+    15       10  30
+               15
+
+
+}
+
